@@ -16,7 +16,10 @@
   "dependencies": {
     "@heroicons/react": "^2.1.5",
     "@rainbow-me/rainbowkit": "2.1.6",
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "^8.17.8",
     "@tanstack/react-query": "^5.28.6",
+    "@types/three": "^0.168.0",
     "@uniswap/sdk-core": "^4.0.1",
     "@uniswap/v2-sdk": "^3.0.1",
     "blo": "^1.0.1",
@@ -30,6 +33,7 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.3.1",
     "react-hot-toast": "^2.4.0",
+    "three": "^0.168.0",
     "use-debounce": "^8.0.4",
     "usehooks-ts": "^2.13.0",
     "viem": "2.21.7",
