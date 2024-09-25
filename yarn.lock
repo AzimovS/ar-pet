@@ -2357,7 +2357,7 @@ __metadata:
     react-dom: ^18.3.1
     react-hot-toast: ^2.4.0
     tailwindcss: ^3.4.11
-    three: ^0.168.0
+    three: ^0.148.0
     type-fest: ^4.6.0
     typescript: 5.5.3
     use-debounce: ^8.0.4
@@ -13246,10 +13246,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:^0.168.0":
-  version: 0.168.0
-  resolution: "three@npm:0.168.0"
-  checksum: 1f186006ad5c8df348d4a2bcdccc078f0454f196b8ccc450d405cdf8c88436ff773e545725ef1122891b5552b5cf03add8394288b58985a0c3ebe66b588cab2f
+"three@npm:^0.148.0":
+  version: 0.148.0
+  resolution: "three@npm:0.148.0"
+  checksum: 3f6359585c006c6f78b2fc1adeb90559d9b7cd6daf5cf916e81494ff228f4a9beffe37136bd8d5b0afbf377ac070b70624245bec2e9ee557035e2c485ce05197
   languageName: node
   linkType: hard
 
