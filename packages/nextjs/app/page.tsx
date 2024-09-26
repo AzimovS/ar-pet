@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import type { NextPage } from "next";
 import { parseEther } from "viem";
@@ -10,7 +11,7 @@ import { FEEDING_PRICE, FILE_URL, MINT_PRICE } from "~~/utils/constants";
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
 
-  const { data: hasNFT } = useScaffoldReadContract({
+  const { data: hasNFT, isLoading } = useScaffoldReadContract({
     contractName: "ARPet",
     functionName: "hasNFT",
     args: [connectedAddress || ""],
@@ -23,6 +24,14 @@ const Home: NextPage = () => {
   });
 
   const { writeContractAsync: writeYourContractAsync } = useScaffoldWriteContract("ARPet");
+
+  if (hasNFT === undefined || isLoading) {
+    return (
+      <div className="flex item-center justify-center mt-10">
+        <span className="w-24 loading loading-spinner"></span>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -37,7 +46,7 @@ const Home: NextPage = () => {
         )}
 
         <div>
-          <img src={`${FILE_URL}/${imageURI}`} alt="NFT" className="mt-3 w-44 rounded-md" />
+          <Image src={`${FILE_URL}/${imageURI}`} width={500} height={500} alt="NFT" className="mt-3 w-44 rounded-md" />
           <div className="flex flex-col mx-auto">
             <p className="mb-2">
               {hasNFT ? `Feeding price is ${FEEDING_PRICE} ETH` : `Price: <b>${MINT_PRICE} ETH</b>`}
