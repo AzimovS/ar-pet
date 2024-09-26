@@ -5,9 +5,9 @@ import { Group, Vector3 } from "three";
 
 export default function Model({ position }: { position?: Vector3 }) {
   const group = useRef<Group>(null);
-  const { nodes, materials, animations } = useGLTF("/models/druid.gltf");
+  const { nodes, animations } = useGLTF("/models/wolf.gltf");
   const { actions, names } = useAnimations(animations, group);
-
+  console.log(nodes, console.log(nodes.wolf));
   const { setAnimations, animationIndex }: any = useCharacterAnimations();
 
   useEffect(() => {
@@ -26,12 +26,11 @@ export default function Model({ position }: { position?: Vector3 }) {
 
   return (
     <group ref={group} position={position} dispose={null}>
-      <group scale={1.91}>
-        <primitive object={nodes.root} />
-        <skinnedMesh geometry={nodes.druid.geometry} material={materials.color_main} skeleton={nodes.druid.skeleton} />
+      <group scale={0.91}>
+        <primitive object={nodes.Wolf} />
       </group>
     </group>
   );
 }
 
-useGLTF.preload("/models/druid.gltf");
+useGLTF.preload("/models/wolf.gltf");
