@@ -8,7 +8,6 @@ import { ARButton, XR } from "@react-three/xr";
 const XrHitModelContainer = () => {
   const [overlayContent, setOverlayContent] = useState<HTMLElement | null>(null);
 
-  // Typing the ref function to accept an HTML element
   const interfaceRef = (node: HTMLElement | null) => {
     if (node !== null) {
       setOverlayContent(node);
@@ -30,7 +29,7 @@ const XrHitModelContainer = () => {
             <XrHitModel />
           </XR>
         </Canvas>
-        <Interface ref={interfaceRef} /> {/* Ref properly passed */}
+        <Interface ref={interfaceRef} />
       </CharacterAnimationsProvider>
     </>
   );

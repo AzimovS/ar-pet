@@ -16,6 +16,7 @@ export default function Model({ position }: { position?: Vector3 }) {
 
   useEffect(() => {
     if (actions && names && names[animationIndex]) {
+      console.log(actions, names, animationIndex);
       actions[names[animationIndex]]?.reset().fadeIn(0.5).play();
 
       return () => {

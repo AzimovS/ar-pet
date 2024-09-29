@@ -386,7 +386,7 @@
         { "sampler": 115, "target": { "node": 38, "path": "rotation" } },
         { "sampler": 116, "target": { "node": 38, "path": "scale" } }
       ],
-      "name": "Idle?",
+      "name": "Idle",
       "samplers": [
         { "input": 1, "interpolation": "LINEAR", "output": 2 },
         { "input": 1, "interpolation": "LINEAR", "output": 3 },
@@ -868,7 +868,7 @@
         { "sampler": 115, "target": { "node": 38, "path": "rotation" } },
         { "sampler": 116, "target": { "node": 38, "path": "scale" } }
       ],
-      "name": "Take 01",
+      "name": "Take",
       "samplers": [
         { "input": 237, "interpolation": "LINEAR", "output": 238 },
         { "input": 237, "interpolation": "LINEAR", "output": 239 },
@@ -1109,7 +1109,7 @@
         { "sampler": 115, "target": { "node": 38, "path": "rotation" } },
         { "sampler": 116, "target": { "node": 38, "path": "scale" } }
       ],
-      "name": "Walk Through The Town...",
+      "name": "Walk",
       "samplers": [
         { "input": 355, "interpolation": "LINEAR", "output": 356 },
         { "input": 355, "interpolation": "LINEAR", "output": 357 },

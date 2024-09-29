@@ -1,18 +1,12 @@
 import React, { forwardRef } from "react";
 import { useCharacterAnimations } from "../contexts/CharacterAnimations";
 
-// Define the props type
 interface InterfaceProps {
-  // Add any props here, for now leaving it empty
   props?: any;
   ref?: any;
 }
 
-// Typing the forwardRef and props
 const Interface = forwardRef<HTMLDivElement, InterfaceProps>((props, ref) => {
-  console.log(props);
-
-  // Properly typing the values retrieved from the context
   const { animations, animationIndex, setAnimationIndex }: any = useCharacterAnimations();
 
   return (

@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract ARPet is ERC721, Ownable {
 	// Base URI for metadata
-	string public baseURI = "Qmex8mQZT2To8e9WWmHWMZCUVd97WsJaq5PndKj9MtfbCk";
+	string public baseURI = "QmVW9v1DMqwUqfXuZwRZyvQKzMorHvJ2U6WdGHKzJy2hNx";
 	string public imageURI = "QmREQxx6q1aiktrtt5YLktm6jLajkAgMMnhd7h8PGXbxMN";
 
 	// Minting price
