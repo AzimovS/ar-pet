@@ -2,6 +2,7 @@
 
 Hackathon project for [Level Up Mini-Hack by Scroll and Alchemy](https://www.levelup.xyz/hackathon/alchemy-mini-hack)
 
+[Website](https://arpet.vercel.app/)
 
 ## Description
 
