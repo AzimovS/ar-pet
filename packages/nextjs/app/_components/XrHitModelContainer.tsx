@@ -4,6 +4,8 @@ import Interface from "./Interface";
 import XrHitModel from "./XrHitModel";
 import { Canvas } from "@react-three/fiber";
 import { ARButton, XR } from "@react-three/xr";
+import { useScaffoldReadContract } from "~~/hooks/scaffold-eth";
+import { FILE_URL } from "~~/utils/constants";
 
 const XrHitModelContainer = () => {
   const [overlayContent, setOverlayContent] = useState<HTMLElement | null>(null);
@@ -13,6 +15,19 @@ const XrHitModelContainer = () => {
       setOverlayContent(node);
     }
   };
+
+  const { data: modelCID, isLoading } = useScaffoldReadContract({
+    contractName: "ARPet",
+    functionName: "baseURI",
+  });
+
+  if (isLoading) {
+    return (
+      <div className="flex item-center justify-center mt-10">
+        <span className="w-24 loading loading-spinner"></span>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -25,9 +40,7 @@ const XrHitModelContainer = () => {
           }}
         />
         <Canvas>
-          <XR>
-            <XrHitModel />
-          </XR>
+          <XR>{modelCID && <XrHitModel modelURI={`${FILE_URL}/${modelCID}`} />}</XR>
         </Canvas>
         <Interface ref={interfaceRef} />
       </CharacterAnimationsProvider>

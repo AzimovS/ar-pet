@@ -3,9 +3,9 @@ import { useCharacterAnimations } from "../contexts/CharacterAnimations";
 import { useAnimations, useGLTF } from "@react-three/drei";
 import { Group, Vector3 } from "three";
 
-export default function Model({ position }: { position?: Vector3 }) {
+export default function Model({ position, modelURI }: { position?: Vector3; modelURI: string }) {
   const group = useRef<Group>(null);
-  const { nodes, animations } = useGLTF("/models/wolf.gltf");
+  const { nodes, animations } = useGLTF(modelURI);
   const { actions, names } = useAnimations(animations, group);
   console.log(nodes, console.log(nodes.wolf));
   const { setAnimations, animationIndex }: any = useCharacterAnimations();
@@ -13,7 +13,8 @@ export default function Model({ position }: { position?: Vector3 }) {
   useEffect(() => {
     setAnimations(names);
   }, []);
-
+  useGLTF.preload(modelURI);
+  console.log(modelURI);
   useEffect(() => {
     if (actions && names && names[animationIndex]) {
       console.log(actions, names, animationIndex);
@@ -33,5 +34,3 @@ export default function Model({ position }: { position?: Vector3 }) {
     </group>
   );
 }
-
-useGLTF.preload("/models/wolf.gltf");

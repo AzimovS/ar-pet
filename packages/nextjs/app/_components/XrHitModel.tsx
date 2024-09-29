@@ -10,7 +10,7 @@ interface ModelInstance {
   id: number;
 }
 
-const XrHitModel: React.FC = () => {
+const XrHitModel = ({ modelURI }: { modelURI: string }) => {
   const reticleRef = useRef<Mesh | null>(null);
   const [models, setModels] = useState<ModelInstance[]>([]);
 
@@ -29,6 +29,7 @@ const XrHitModel: React.FC = () => {
       reticleRef.current.rotation.set(-Math.PI / 2, 0, 0);
     }
   });
+  console.log(modelURI);
 
   const placeModel = (e: any) => {
     const position = e.intersection.object.position.clone();
@@ -40,7 +41,7 @@ const XrHitModel: React.FC = () => {
     <>
       <OrbitControls />
       <ambientLight />
-      {isPresenting && models.map(({ position, id }) => <Model key={id} position={position} />)}
+      {isPresenting && models.map(({ position, id }) => <Model key={id} position={position} modelURI={modelURI} />)}
       {isPresenting && (
         <Interactive onSelect={placeModel}>
           <mesh ref={reticleRef} rotation-x={-Math.PI / 2}>
@@ -49,7 +50,7 @@ const XrHitModel: React.FC = () => {
           </mesh>
         </Interactive>
       )}
-      {!isPresenting && <Model />}
+      {!isPresenting && <Model modelURI={modelURI} />}
     </>
   );
 };
