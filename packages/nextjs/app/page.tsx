@@ -6,7 +6,7 @@ import type { NextPage } from "next";
 import { parseEther } from "viem";
 import { useAccount } from "wagmi";
 import { useScaffoldReadContract, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
-import { FEEDING_PRICE, FILE_URL, MINT_PRICE } from "~~/utils/constants";
+import { FILE_URL, MINT_PRICE } from "~~/utils/constants";
 
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
         <div>
           <Image src={`${FILE_URL}/${imageURI}`} width={500} height={500} alt="NFT" className="mt-3 w-44 rounded-md" />
           <div className="flex flex-col mx-auto">
-            <p className="mb-2">{hasNFT ? `Feeding price is ${FEEDING_PRICE} ETH` : `Price: ${MINT_PRICE} ETH`}</p>
+            <p className="mb-2">{hasNFT ? `` : `Price: ${MINT_PRICE} ETH`}</p>
             {hasNFT ? (
               <button
                 className="btn btn-primary"
