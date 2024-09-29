@@ -15,10 +15,22 @@ export default function Model({ position, modelURI }: { position?: Vector3; mode
   const { writeContractAsync: writeYourContractAsync } = useScaffoldWriteContract("ARPet");
 
   const feedPet = async () => {
-    await writeYourContractAsync({
-      functionName: "feedPet",
-      value: parseEther(FEEDING_PRICE),
-    });
+    try {
+      await writeYourContractAsync(
+        {
+          functionName: "feedPet",
+          value: parseEther(FEEDING_PRICE),
+        },
+        {
+          onBlockConfirmation: () => {
+            return true;
+          },
+        },
+      );
+    } catch (e) {
+      console.error("Error setting greeting", e);
+      return false;
+    }
     return true;
   };
 
@@ -27,28 +39,19 @@ export default function Model({ position, modelURI }: { position?: Vector3; mode
   }, []);
   useGLTF.preload(modelURI);
   useEffect(() => {
-    const feed = async () => {
-      try {
-        const response = await feedPet();
-        return response; // If feedPet is successful, return true
-      } catch (error) {
-        console.error("Error feeding pet:", error);
-        return false; // If there's an error, return false
-      }
-    };
-
     const handleAction = async () => {
       if (actions && names && names[animationIndex]) {
         // Check if the current animation is "Take"
         if (names[animationIndex] === "Take") {
           actions[names[0]]?.reset().fadeIn(0.5).play();
-          const isFeeded = await feed(); // Await the feed function
+          const isFeeded = await feedPet(); // Await the feed function
           actions[names[0]]?.fadeOut(0.5);
-          actions[names[animationIndex]]?.reset().fadeIn(0.5).play();
-          if (!isFeeded) return; // Exit if feeding was unsuccessful
+          console.log(isFeeded);
+          if (!isFeeded) {
+            actions[names[0]]?.reset().fadeIn(0.5).play();
+            return;
+          }
         }
-
-        // If successful or not "Take", play the animation
         actions[names[animationIndex]]?.reset().fadeIn(0.5).play();
       }
     };
