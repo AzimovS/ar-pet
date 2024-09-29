@@ -13,7 +13,7 @@ The core smart contracts are verified on Scroll Sepolia testnet.
 
 | Contract                                  | Link                                  |
 | ---------------------------------------- | -------------------------------------------- |
-| `ARPet` | [0xDb2d3CA48F7BfAd54b0AF4dEc6E269f9a5739b37](https://sepolia.scrollscan.com/address/0xDb2d3CA48F7BfAd54b0AF4dEc6E269f9a5739b37#code) |
+| `ARPet` | [0x627D4e76B1147Da62AcD5BfD0e43Ae1c56223a01](https://sepolia.scrollscan.com/address/0x627D4e76B1147Da62AcD5BfD0e43Ae1c56223a01#code) |
 
 ## Requirements
 

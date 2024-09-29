@@ -41,8 +41,7 @@ export default function Model({ position, modelURI }: { position?: Vector3; mode
   useEffect(() => {
     const handleAction = async () => {
       if (actions && names && names[animationIndex]) {
-        // Check if the current animation is "Take"
-        if (names[animationIndex] === "Take") {
+        if (names[animationIndex] === "Feed") {
           actions[names[0]]?.reset().fadeIn(0.5).play();
           const isFeeded = await feedPet(); // Await the feed function
           actions[names[0]]?.fadeOut(0.5);

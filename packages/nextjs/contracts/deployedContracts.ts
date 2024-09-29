@@ -553,7 +553,7 @@ const deployedContracts = {
   },
   534351: {
     ARPet: {
-      address: "0xDb2d3CA48F7BfAd54b0AF4dEc6E269f9a5739b37",
+      address: "0x627D4e76B1147Da62AcD5BfD0e43Ae1c56223a01",
       abi: [
         {
           inputs: [],
@@ -705,13 +705,7 @@ const deployedContracts = {
           type: "function",
         },
         {
-          inputs: [
-            {
-              internalType: "uint256",
-              name: "tokenId",
-              type: "uint256",
-            },
-          ],
+          inputs: [],
           name: "checkLastFed",
           outputs: [
             {
