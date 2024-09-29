@@ -178,13 +178,7 @@ const deployedContracts = {
           type: "function",
         },
         {
-          inputs: [
-            {
-              internalType: "uint256",
-              name: "tokenId",
-              type: "uint256",
-            },
-          ],
+          inputs: [],
           name: "feedPet",
           outputs: [],
           stateMutability: "payable",
@@ -559,7 +553,7 @@ const deployedContracts = {
   },
   534351: {
     ARPet: {
-      address: "0xBf7829Dc9c62CdaA20d4314c5bB74Fb5Ae7Cc1bf",
+      address: "0xCFC3dfA7E9C6241562d34B17F232cf5FF09bb96A",
       abi: [
         {
           inputs: [],
@@ -730,13 +724,7 @@ const deployedContracts = {
           type: "function",
         },
         {
-          inputs: [
-            {
-              internalType: "uint256",
-              name: "tokenId",
-              type: "uint256",
-            },
-          ],
+          inputs: [],
           name: "feedPet",
           outputs: [],
           stateMutability: "payable",

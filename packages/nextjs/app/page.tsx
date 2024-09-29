@@ -25,7 +25,12 @@ const Home: NextPage = () => {
 
   const { writeContractAsync: writeYourContractAsync } = useScaffoldWriteContract("ARPet");
 
-  if (hasNFT === undefined || isLoading) {
+  if (!connectedAddress) {
+    return <div className="flex item-center justify-center mt-10">Please connect your wallet</div>;
+  }
+  console.log(hasNFT, isLoading);
+
+  if (isLoading) {
     return (
       <div className="flex item-center justify-center mt-10">
         <span className="w-24 loading loading-spinner"></span>

@@ -32,11 +32,10 @@ contract ARPet is ERC721, Ownable {
 	}
 
 	// Function to feed the pet
-	function feedPet(uint256 tokenId) external payable {
-		require(_exists(tokenId), "Pet does not exist");
+	function feedPet() external payable {
+		uint256 tokenId = getTokenId(msg.sender);
 		require(ownerOf(tokenId) == msg.sender, "You do not own this pet");
 		require(msg.value >= feedingPrice, "Incorrect Ether value sent");
-
 		lastFed[tokenId] = block.timestamp;
 	}
 
@@ -62,6 +61,16 @@ contract ARPet is ERC721, Ownable {
 			}
 		}
 		return false; // The owner does not have any NFTs
+	}
+
+	// Function to check if an address owns any NFT from this contract
+	function getTokenId(address owner) internal view returns (uint256) {
+		for (uint256 i = 1; i <= _tokenIdCounter; i++) {
+			if (ownerOf(i) == owner) {
+				return i;
+			}
+		}
+		return 0; // The owner does not have any NFTs
 	}
 
 	// Function to withdraw funds from the contract
