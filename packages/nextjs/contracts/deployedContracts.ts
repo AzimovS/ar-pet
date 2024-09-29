@@ -553,7 +553,7 @@ const deployedContracts = {
   },
   534351: {
     ARPet: {
-      address: "0xCFC3dfA7E9C6241562d34B17F232cf5FF09bb96A",
+      address: "0xDb2d3CA48F7BfAd54b0AF4dEc6E269f9a5739b37",
       abi: [
         {
           inputs: [],
