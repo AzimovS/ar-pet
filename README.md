@@ -1,4 +1,4 @@
-# 🐕 ARPet
+# 🐕 ARPet | 3D NFT
 
 Hackathon project for [Level Up Mini-Hack by Scroll and Alchemy](https://www.levelup.xyz/hackathon/alchemy-mini-hack)
 
@@ -6,7 +6,7 @@ Hackathon project for [Level Up Mini-Hack by Scroll and Alchemy](https://www.lev
 
 ## Description
 
-Introducing your new virtual companion: an AR pet that you can mint and bring to life! Once minted, your AR pet can roam around your space, interact with you, and join in on various activities.
+Introducing your new virtual companion: an AR pet that you can mint (3D NFT) and bring to life! Once minted, your AR pet can roam around your space, interact with you, and join in on various activities.
 
 <p align="center">
   <img src="demo.png" alt="demo" width="75%"/>
