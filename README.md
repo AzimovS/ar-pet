@@ -7,6 +7,11 @@ Hackathon project for [Level Up Mini-Hack by Scroll and Alchemy](https://www.lev
 
 Introducing your new virtual companion: an AR pet that you can mint and bring to life! Once minted, your AR pet can roam around your space, interact with you, and join in on various activities.
 
+<p align="center">
+  <img src="demo.png" alt="demo" width="75%"/>
+  <img src="demo.gif" alt="animated" />
+</p>
+
 ## Smart Contract
 
 The core smart contracts are verified on Scroll Sepolia testnet.
@@ -14,6 +19,10 @@ The core smart contracts are verified on Scroll Sepolia testnet.
 | Contract                                  | Link                                  |
 | ---------------------------------------- | -------------------------------------------- |
 | `ARPet` | [0x627D4e76B1147Da62AcD5BfD0e43Ae1c56223a01](https://sepolia.scrollscan.com/address/0x627D4e76B1147Da62AcD5BfD0e43Ae1c56223a01#code) |
+
+## Alchemy RPC
+
+Alchemy's RPC was used for [deploying](https://github.com/AzimovS/ar-pet/blob/2c5b1da08aa35337af5346e5221fb5f8303faa01/packages/hardhat/hardhat.config.ts#L111) the smart contract and [retrieving](https://github.com/AzimovS/ar-pet/blob/2c5b1da08aa35337af5346e5221fb5f8303faa01/packages/nextjs/scaffold.config.ts#L23) information about new data.
 
 ## Requirements
 
