@@ -46,7 +46,6 @@ export default function Model({ position, modelURI }: { position?: Vector3; mode
           actions[names[0]]?.reset().fadeIn(0.5).play();
           const isFeeded = await feedPet(); // Await the feed function
           actions[names[0]]?.fadeOut(0.5);
-          console.log(isFeeded);
           if (!isFeeded) {
             actions[names[0]]?.reset().fadeIn(0.5).play();
             return;

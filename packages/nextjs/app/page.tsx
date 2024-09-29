@@ -28,7 +28,6 @@ const Home: NextPage = () => {
   if (!connectedAddress) {
     return <div className="flex item-center justify-center mt-10">Please connect your wallet</div>;
   }
-  console.log(hasNFT, isLoading);
 
   if (isLoading) {
     return (

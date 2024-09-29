@@ -29,7 +29,6 @@ const XrHitModel = ({ modelURI }: { modelURI: string }) => {
       reticleRef.current.rotation.set(-Math.PI / 2, 0, 0);
     }
   });
-  console.log(modelURI);
 
   const placeModel = (e: any) => {
     const position = e.intersection.object.position.clone();
