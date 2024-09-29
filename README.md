@@ -7,6 +7,14 @@ Hackathon project for [Level Up Mini-Hack by Scroll and Alchemy](https://www.lev
 
 Introducing your new virtual companion: an AR pet that you can mint and bring to life! Once minted, your AR pet can roam around your space, interact with you, and join in on various activities.
 
+## Smart Contract
+
+The core smart contracts are verified on Scroll Sepolia testnet.
+
+| Contract                                  | Link                                  |
+| ---------------------------------------- | -------------------------------------------- |
+| `ARPet` | [0xDb2d3CA48F7BfAd54b0AF4dEc6E269f9a5739b37](https://sepolia.scrollscan.com/address/0xDb2d3CA48F7BfAd54b0AF4dEc6E269f9a5739b37#code) |
+
 ## Requirements
 
 Before you begin, you need to install the following tools:
