@@ -48,9 +48,7 @@ const Home: NextPage = () => {
         <div>
           <Image src={`${FILE_URL}/${imageURI}`} width={500} height={500} alt="NFT" className="mt-3 w-44 rounded-md" />
           <div className="flex flex-col mx-auto">
-            <p className="mb-2">
-              {hasNFT ? `Feeding price is ${FEEDING_PRICE} ETH` : `Price: <b>${MINT_PRICE} ETH</b>`}
-            </p>
+            <p className="mb-2">{hasNFT ? `Feeding price is ${FEEDING_PRICE} ETH` : `Price: ${MINT_PRICE} ETH`}</p>
             {hasNFT ? (
               <button
                 className="btn btn-primary"
