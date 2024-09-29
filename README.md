@@ -59,6 +59,13 @@ yarn start
 
 Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
 
+## Future Ideas
+- Introduce customizable options for a variety of pets.
+- Add unique animations for each pet to enhance user engagement.
+- Display the last feeding time and incorporate a feature where pets can potentially die if not fed, introducing a hunger mechanic.
+- Implement a leveling system where pets start as babies (e.g., a puppy) and grow over time, reaching new stages of development (e.g., after 5-10 days of regular feeding, the pet matures).
+- Add the ability to transfer pet ownership temporarily/permanently, allowing others to take care of pets if the owner is unavailable to feed them.
+
 ## License
 This project is licensed under the terms specified in the [LICENCE.md](LICENCE.md) file.
 
