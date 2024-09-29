@@ -40,7 +40,8 @@ contract ARPet is ERC721, Ownable {
 	}
 
 	// Function to check when the pet was last fed
-	function checkLastFed(uint256 tokenId) external view returns (uint256) {
+	function checkLastFed() external view returns (uint256) {
+		uint256 tokenId = getTokenId(msg.sender);
 		require(_exists(tokenId), "Pet does not exist");
 		return lastFed[tokenId];
 	}
