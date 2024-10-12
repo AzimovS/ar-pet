@@ -1,6 +1,6 @@
 # 🐕 ARPet | 3D NFT
 
-Hackathon project for [Level Up Mini-Hack by Scroll and Alchemy](https://www.levelup.xyz/hackathon/alchemy-mini-hack)
+Winner 🏆 of the Level Up Mini-Hack Hackathon by Scroll and Alchemy
 
 [Website](https://arpet.vercel.app/)
 
